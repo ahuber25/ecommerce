@@ -15,7 +15,8 @@ router.get('/', (req, res) => {
   .then((tags) => {
     res.json(tags)
   })
-  .then((err) => {
+  .catch((err) => {
+    console.log(err)
     res.status(500).json(err)
   })
 });
@@ -35,7 +36,8 @@ router.get('/:id', (req, res) => {
   .then((tag) => {
     res.json(tag)
   })
-  .then((err) => {
+  .catch((err) => {
+    console.log(err)
     res.status(500).json(err)
   })
 });
@@ -45,7 +47,8 @@ router.post('/', (req, res) => {
   .then((tag) => {
     res.json(tag)
   })
-  .then((err) => {
+  .catch((err) => {
+    console.log(err)
     res.status(500).json(err)
   })
 });
@@ -59,7 +62,8 @@ router.put('/:id', (req, res) => {
   .then((tag) => {
     res.json(tag)
   })
-  .then((err) => {
+  .catch((err) => {
+    console.log(err)
     res.status(500).json(err)
   })
 });
@@ -73,7 +77,8 @@ router.delete('/:id', (req, res) => {
   .then((tag) => {
     res.json(tag)
   })
-  .then((err) => {
+  .catch((err) => {
+    console.log(err)
     res.status(500).json(err)
   })
 });
